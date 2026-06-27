@@ -3,9 +3,9 @@ const canvas = document.getElementById('arcade-canvas');
 const ctx = canvas ? canvas.getContext('2d') : null;
 
 // Audio Asset Hooks
-const audioFling = new Audio('fling.mp3');
-const audioDestroy = new Audio('destroy.mp3');
-const audioVictory = new Audio('victory.mp3');
+const audioFling = new Audio('./audio/fling.mp3');
+const audioDestroy = new Audio('./audio/destroy.mp3');
+const audioVictory = new Audio('./audio/victory.mp3');
 
 audioFling.preload = 'auto';
 audioDestroy.preload = 'auto';
