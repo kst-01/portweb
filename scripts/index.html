@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KST</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Cyberpunk flowchart-style single-page portfolio" />
+  </head>
+  <body>
+    <div class="container-xl site-border-container">
+      
+      <div class="scene3d">
+        <div class="grid3d"></div>
+      </div>
+
+      <header class="nav">
+        <div class="logo">My<span> Portfolio</span></div>
+        <nav>
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#Contact-footer">Contact</a>
+        </nav>
+        <button class="menu" aria-label="menu">☰</button>
+      </header>
+
+      <main class="snap-container">
+        <section id="hero" class="screen-section hero-screen">
+          <div id="holo" aria-hidden="true"></div>
+          <canvas id="arcade-canvas"></canvas>
+
+          <div class="hero-inner container text-center">
+            <h1 class="vhs" data-text="Krishna Singh">Krishna Singh</h1>
+            <h3 class="lead">Software Developer | Full-Stack, IoT & Game Development.</h3>
+            <div class="cta">
+              <a href="#projects" class="btn target-node">See Projects</a>
+              <a href="#Contact-footer" class="btn ghost target-node">Contact</a>
+            </div>
+            <div class="social-row">
+              <a class="social-link target-node" href="https://github.com/kst-01" target="_blank" rel="noopener">GitHub</a>
+              <a class="social-link target-node" href="https://www.linkedin.com/in/krishna-singh-4457042a6/" target="_blank" rel="noopener">LinkedIn</a>
+              <span class="social-link target-node">Discord: kst1549</span>
+            </div>
+          </div>
+
+          <div class="ring-stage">
+            <div class="tech-ring">
+              <div class="ring-item" style="--i:1;"><span class="ammo">Python</span></div>
+              <div class="ring-item" style="--i:2;"><span class="ammo">JS</span></div>
+              <div class="ring-item" style="--i:3;"><span class="ammo">Node</span></div>
+              <div class="ring-item" style="--i:4;"><span class="ammo">Unity</span></div>
+              <div class="ring-item" style="--i:5;"><span class="ammo">C#</span></div>
+              <div class="ring-item" style="--i:6;"><span class="ammo">HTML</span></div>
+              <div class="ring-item" style="--i:7;"><span class="ammo">CSS</span></div>
+              <div class="ring-item" style="--i:8;"><span class="ammo">IoT</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="screen-section content-screen">
+          <div class="common-header-container">
+            <h2 class="common-titles" data-text="About">About me</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <h2>Career Objective</h2>
+              <p>To work and provide better.</p>
+            </div>
+            <div class="card">
+              <h2>Summary</h2>
+              <p>Hello! I'm Krishna Singh, a passionate software developer with a keen interest in full-stack development, IoT, and game development. I enjoy creating innovative solutions and bringing ideas to life through code.</p>
+            </div>
+            <div class="card">
+              <h2>Contact</h2>
+              <p><a href="mailto:kst15490@gmail.com">kst15490@gmail.com</a> • +91 9311593141 • Delhi</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="screen-section content-screen">
+          <div class="common-header-container">
+            <h2 class="common-titles" data-text="Experience">Experience</h2>
+          </div>
+          <div class="card-grid">
+            <div class="card">
+              <h2>Work Experience</h2>
+              <p><strong>3d Game Development Mentor • Internship</strong><br>Tutedude Pvt Ltd, Virtual — Jul 2025 - Present</p>
+            </div>
+            <div class="card">
+              <h2>Education</h2>
+              <p><strong>BCA, Computer Science & Technology</strong><br>Institute Of Innovation In Technology & Management — 2023 - 2026</p>
+              <p><strong>Senior Secondary (XII), CBSE — Commerce</strong><br>Indira Ideal School, Janak Puri, New Delhi — 2023</p>
+            </div>
+            <div class="card">
+              <h2>Certifications</h2>
+              <p>Power BI — Jul 2024<br>Advanced Excel — Jan 2025</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="screen-section content-screen flow-projects">
+          <div class="common-header-container">
+            <h2 class="common-titles" data-text="PROJECTS">PROJECTS</h2>
+          </div>
+
+          <div class="flow-wrapper">
+            <div class="categories">
+              <div class="category">
+                <div class="category-inner">
+                  <h3 class="cat-title">Game Development</h3>
+                  <ol class="cat-list">
+                      <li><a href="projects/forlorn.html">ForLorn</a> — Python (Nov 2025)</li>
+                      <li><a href="projects/cubydash.html">Cuby Dash</a> — 2D (Aug 2022)</li>
+                      <li><a href="projects/hypnotic-cube.html">Hypnotic Cube</a> — Open world</li>
+                      <li><a href="projects/annoying-red-button.html">Red Button</a> — Mini-game</li>
+                      <li><a href="projects/pftf.html">PFTF game</a> — 3D Unity</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="category">
+                <div class="category-inner">
+                  <h3 class="cat-title">Full Stack Development</h3>
+                  <ol class="cat-list">
+                      <li><a href="projects/indentron.html">Indentron</a> — VSCode ext (2025)</li>
+                      <li><a href="projects/pronexin.html">Pronexin website</a> — ESP8266 static</li>
+                      <li><a href="projects/minlive.html">MinLive</a> — YouTube ↔ Minecraft</li>
+                      <li><a href="projects/random-password-generator.html">Password Gen</a> — Python</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="category">
+                <div class="category-inner">
+                  <h3 class="cat-title">IoT / Embedded Systems</h3>
+                  <ol class="cat-list">
+                    <li><a href="projects/creating-neuo.html">Creating Neuo</a> — IoT Device</li>
+                    <li><a href="projects/lurna.html">Lurna</a> — Pet robo (Pi Zero 2W)</li>
+                    <li><a href="projects/nurlar.html">NurlAR</a> — AR WiFi heatmap</li>
+                    <li><a href="projects/sensorhub.html">SensorHub</a> — Aggregator</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="Contact-footer" class="screen-section footer-screen">
+          <footer class="Contact-footer-content">
+            <div class="logo">Krishna<span> Singh</span></div>
+            <p class="contact-line">Contact me at <a href="mailto:kst15490@gmail.com">kst15490@gmail.com</a> • <a href="tel:+919311593141">+91 9311593141</a> • <a href="https://maps.google.com" target="_blank">Delhi</a></p>
+            <p class="contact-line">© <span id="year"></span> Krishna Singh. All rights reserved.</p>
+          </footer>
+        </section>
+      </main>
+
+    </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

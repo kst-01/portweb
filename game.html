@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop Game</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        color: #333;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 30px;
+    }
+    .box, .dropzone {
+        width: 100px;
+        height: 100px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        cursor: grab;
+    }
+    .box {
+        border: 2px solid #333;
+    }
+    .dropzone {
+        border: 3px dashed #999;
+        background: #fff;
+        color: #333;
+    }
+    .dropzone.correct {
+        border-color: green;
+        background: lightgreen;
+    }
+    .dropzone.wrong {
+        border-color: red;
+        background: lightcoral;
+    }
+</style>
+</head>
+<body>
+
+<h1>🎯 Drag and Drop Matching Game</h1>
+<p>Drag each colored box into the matching drop zone.</p>
+
+<div class="container">
+    <!-- Draggable boxes -->
+    <div class="box" draggable="true" id="red" style="background:red;">Red</div>
+    <div class="box" draggable="true" id="blue" style="background:blue;">Blue</div>
+    <div class="box" draggable="true" id="green" style="background:green;">Green</div>
+</div>
+
+<div class="container">
+    <!-- Drop zones -->
+    <div class="dropzone" data-color="red">Drop Red</div>
+    <div class="dropzone" data-color="blue">Drop Blue</div>
+    <div class="dropzone" data-color="green">Drop Green</div>
+</div>
+
+<script>
+let draggedItem = null;
+
+// Handle drag start
+document.querySelectorAll('.box').forEach(box => {
+    box.addEventListener('dragstart', e => {
+        draggedItem = e.target;
+        e.dataTransfer.setData('text/plain', e.target.id);
+    });
+});
+
+// Allow drop
+document.querySelectorAll('.dropzone').forEach(zone => {
+    zone.addEventListener('dragover', e => {
+        e.preventDefault();
+    });
+
+    // Handle drop
+    zone.addEventListener('drop', e => {
+        e.preventDefault();
+        const color = e.dataTransfer.getData('text/plain');
+        if (zone.dataset.color === color) {
+            zone.classList.add('correct');
+            zone.textContent = "✅ Correct!";
+            zone.appendChild(draggedItem);
+        } else {
+            zone.classList.add('wrong');
+            zone.textContent = "❌ Wrong!";
+            setTimeout(() => {
+                zone.classList.remove('wrong');
+                zone.textContent = `Drop ${zone.dataset.color.charAt(0).toUpperCase() + zone.dataset.color.slice(1)}`;
+            }, 1000);
+        }
+    });
+});
+</script>
+</body>
+</html>
